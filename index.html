@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GSD Calculator</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel='stylesheet' href='css/normalize.css'>
+    <link rel='stylesheet' href='css/skeleton.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="three columns"></div>
+            <div class="row">
+                <div class="twelve columns">
+                    <h2>Ground Sample Distance Calculator</h2>
+
+                    <p>This page contains several calculators useful for drone photogrammetry, including pixel size calculations, focal length equivelant conversion calculations, and ground sample distance calculations.</p>
+
+                    <h3>Pixel Size Calculator</h3>
+                    <p>Pixel density is important in photogrammetry calculations…</p>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label>Sensor Width (mm):</label>
+                        <input type="text" class="u-full-width" placeholder="35.9" id="sensor_width">
+                    </div>
+                    <div class="six columns">
+                        <label>Sensor Height (mm):</label>
+                        <input type="text" class="u-full-width" placeholder="24" id="sensor_height">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label>Image Width (pixels):</label>
+                        <input type="text" class="u-full-width" placeholder="4000" id="image_width">
+                    </div>
+                    <div class="six columns">
+                        <label>Image Height (pixels):</label>
+                        <input type="text" class="u-full-width" placeholder="3000" id="image_height">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <button class="button-primary" id="button">Calculate Pixel Size</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="twelve columns">
+                        <label>Pixel Size (mm):</label>
+                        <input type="text" class="u-full-width" name="pixel_size" id="pixel_size">
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="twelve columns">
+
+<h3>Ground Sample Distance</h3>
+
+                <p>The Ground Sample Distance is a measure of resolution in aerial photogrammetry. It provides you how much ground in meters is covered by a single pixel.</p>
+            </div>
+            <div class="row">
+                <div class="three columns">
+                    <label>Height (m):</label>
+                    <input type="text" class="u-full-width" placeholder="100" id="altitude">
+                </div>
+                <div class="three columns">
+                    <label>Focal Length (mm):</label>
+                    <input type="text" class="u-full-width" placeholder="35" id="focal_length">
+                </div>
+            </div>
+            <div class="row">
+                <div class="three columns">
+                    <label>Pixel Size (mm):</label>
+                    <input type="text" class="u-full-width" placeholder="0.00597" id="px">
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    <button class="button-primary" id="gsd_button">Calculate Ground Sample Distance</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="six columns">
+                    <label class="u-full-width">GSD (cm):</label>
+                    <input name="gsd" id="gsd">
+                </div>
+                <div class="six columns">
+                    <label class="u-full-width">GSD Area (m2):</label>
+                    <input name="gsd_area" id="gsd_area">
+                </div>
+            </div>
+        </div>
+        <div class="three columns"></div>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src=math.min.js></script>
+<script type="text/javascript" src=calc.js></script>
+</html>
