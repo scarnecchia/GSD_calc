@@ -153,6 +153,9 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin-top: 0; }
+p.small {
+  font-size: 10px;
+}
 
 
 /* Links

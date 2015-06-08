@@ -6,6 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
     <link rel='stylesheet' href='css/normalize.css'>
     <link rel='stylesheet' href='css/skeleton.css'>
+    <link rel='stylesheet' href='css/jquery-ui.min.css'>
 </head>
 <body>
     <div class="container">
@@ -85,15 +86,29 @@
                     <input type="text" name="gsd" id="gsd">
                 </div>
                 <div class="six columns">
-                    <label class="u-full-width">Photo Footprint Area (m2):</label>
+                    <label class="u-full-width">Photo Footprint Area (m<sup>2</sup>):<sup id="area_info" title="Why is this zero?"><a href="#fn1">1</a></sup></label>
                     <input type="text" name="gsd_area" id="gsd_area">
                 </div>
             </div>
         </div>
         <div class="three columns"></div>
     </div>
+    <hr>
+    <footer>
+    <div class="row">
+      <div class="four columns">
+        <p class="u-full-width small" id="fn1" >1. Photo Footprint Area returns zero after calculating GSD when values for image height and image width are missing. Area is calculated as (Image Width * GSD) * (Image Height * GSD).</p>
+      </div>
+      <div class="eight columns">
+        <p class="u-full-width small" id="credits">GSD Calculator created by <a href="https://github.com/scarnecchia">Daniel Scarnecchia</a>, with help from <a href="https://github.com/trinary">Erik Cunningham</a> and <a href="http://faineg.com">Faine Greenwood</a>. It is licensed under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT License</a>. Fork me on <a href="https://github.com/scarnecchia/GSD_calc">Github</a>.
+        </p>
+    </div>
+    </div>
+  </footer>
     </div>
 </body>
-<script type="text/javascript" src=math.min.js></script>
-<script type="text/javascript" src=calc.js></script>
+<script type="text/javascript" src=js/math.min.js></script>
+<script type="text/javascript" src=http://code.jquery.com/jquery-2.1.4.min.js></script>
+<script type="text/javascript" src=js/jquery-ui.min.js></script>
+<script type="text/javascript" src=js/calc.js></script>
 </html>
