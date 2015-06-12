@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="twelve columns">
                     <h3>Calculator for Photogrammetry</h3>
-                    <h4>Camera Attributes</h4>
+                    <h5>Camera Attributes</h5>
                     <p>Please enter the sensor height and width of your camera (mm) and the image height and width (pixels).</p>
                 </div>
                 <div class="row">
@@ -65,7 +65,7 @@
               <input type="text" class="u-full-width" placeholder="100" id="AGL_known">
         </div>
         <div class="four columns">
-              <label>Focal Length (mm):</label>
+              <label>Focal Length (mm):<sup id="area_info" title="A Note on Focal Length"><a href="#fn1">1</a></sup></label>
               <input type="text" class="u-full-width" placeholder="35" id="focal_length">
         </div>
       </div>
@@ -80,7 +80,7 @@
               <input class="u-full-width" type="text" name="gsd" id="gsd">
           </div>
           <div class="six columns">
-              <label>Photo Footprint Area (m<sup>2</sup>):<sup id="area_info" title="Why is this zero?"><a href="#fn1">1</a></sup></label>
+              <label>Photo Footprint Area (m<sup>2</sup>):<sup id="area_info_2" title="Why is this zero?"><a href="#fn2">2</a></sup></label>
               <input class="u-full-width" type="text" name="gsd_area" id="gsd_area">
           </div>
       </div>
@@ -99,7 +99,7 @@
               <input type="text" class="u-full-width" placeholder="1.5" id="GSD_known">
         </div>
         <div class="four columns">
-              <label>Focal Length (mm):</label>
+              <label>Focal Length (mm):<sup id="area_info_3" title="A Note on Focal Length"><a href="#fn1">1</a></sup></label>
               <input type="text" class="u-full-width" placeholder="35" id="focal_length2">
         </div>
       </div>
@@ -118,7 +118,10 @@
     <footer>
     <div class="row">
       <div class="four columns">
-        <p class="u-full-width small" id="fn1" >1. Photo Footprint Area returns zero after calculating GSD when values for image height and image width are missing. Area is calculated as (Image Width * GSD) * (Image Height * GSD).</p>
+          <ol>
+            <li id="fn1" class="u-full-width small">Focal length is real focal length, rather than 35mm equivalent. For a Canon S100, this would 5.2-26mm, rather than the 35mm equivalent of 24-120mm.</li>
+            <li id="fn2" class="u-full-width small">Photo Footprint Area returns zero after calculating GSD when values for image height and image width are missing. Area is calculated as (Image Width * GSD) * (Image Height * GSD).</li>
+          </ol>
       </div>
       <div class="eight columns">
         <p class="u-full-width small" id="credits">GSD Calculator created by <a href="https://github.com/scarnecchia">Daniel Scarnecchia</a>, with help from <a href="https://github.com/trinary">Erik Cunningham</a> and <a href="http://faineg.com">Faine Greenwood</a>. It is licensed under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT License</a>. Fork me on <a href="https://github.com/scarnecchia/GSD_calc">Github</a>.

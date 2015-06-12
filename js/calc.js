@@ -1,3 +1,15 @@
+$( "#area_info" ).tooltip({
+  position: { my: "left+15 center", at: "right center" }
+});
+
+$( "#area_info_2" ).tooltip({
+  position: { my: "left+15 center", at: "right center" }
+});
+
+$( "#area_info_3" ).tooltip({
+  position: { my: "left+15 center", at: "right center" }
+});
+
 /*pixel size Calculations*/
 
 function calc_pix_size(){
@@ -61,10 +73,6 @@ function todo() {
 
 var gsd_button = document.getElementById("gsd_button");
 gsd_button.onclick = todo;
-
-$( "#area_info" ).tooltip({
-  position: { my: "left+15 center", at: "right center" }
-});
 
 /*Altitude Calculations*/
 

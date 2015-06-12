@@ -306,6 +306,10 @@ ol ul {
 li {
   margin-bottom: 1rem; }
 
+li.small {
+    font-size: 10px;
+  }
+
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
