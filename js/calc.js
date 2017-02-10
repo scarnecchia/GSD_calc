@@ -42,13 +42,12 @@ $( "#AGL_select" ).click(function() {
 });
 
 /*GSD Calculations*/
-
 function calc_gsd(){
   var px = document.getElementById("px").value;
   var altitude = document.getElementById("AGL_known").value;
   var flength = document.getElementById("focal_length").value;
 
-  var gsdur = (px * altitude) / flength);
+  var gsdur = (px * altitude / flength) * 100;
   var gsd = math.round(gsdur, 4);
 
   document.getElementById("gsd").value = gsd;
@@ -57,7 +56,7 @@ function calc_gsd(){
 function calc_photo_area() {
   var image_width = document.getElementById("image_width").value;
   var image_height = document.getElementById("image_height").value;
-  var gsd_math = document.getElementById("gsd").value;
+  var gsd_math = (document.getElementById("gsd").value) /100;
 
   var gsd_width = image_width * gsd_math;
   var gsd_height = image_height * gsd_math;
